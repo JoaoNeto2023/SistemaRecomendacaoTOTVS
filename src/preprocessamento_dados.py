@@ -1,5 +1,3 @@
-#Código para pré-processamento dos dados
-
 import pandas as pd
 
 def carregar_dados(caminho_arquivo):
@@ -10,8 +8,13 @@ def carregar_dados(caminho_arquivo):
 def preprocessar_dados(dados):
     # Remover dados duplicados
     dados.drop_duplicates(inplace=True)
+    
     # Tratar valores ausentes
     dados.fillna(0, inplace=True)
+    
+    # Mapeamento da coluna tipo_interacao para valores numéricos
+    dados['tipo_interacao'] = dados['tipo_interacao'].map({'compra': 1, 'visualizacao': 0})
+    
     return dados
 
 if __name__ == "__main__":
