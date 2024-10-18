@@ -1,0 +1,10 @@
+id_cliente,id_produto,tipo_interacao
+1,101,compra
+1,102,visualizacao
+2,101,compra
+2,103,visualizacao
+3,102,compra
+3,104,visualizacao
+1,103,visualizacao
+2,104,compra
+3,101,visualizacao
